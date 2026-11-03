@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flying Srikanth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-icon">✦</span> FLYING SRikANTH</div>
+      <button id="soundBtn" class="sound-btn" aria-label="Toggle music">♫ Music: On</button>
+    </header>
+
+    <section class="game-shell">
+      <div class="game-heading">
+        <p class="eyebrow">THE LEGEND TAKES FLIGHT</p>
+        <h1>Flying <span>Srikanth</span></h1>
+        <p class="subtitle">One face. Endless pipes. Questionable flight skills.</p>
+      </div>
+      <div class="stage-wrap">
+        <canvas id="game" width="480" height="640" aria-label="Flying Srikanth game"></canvas>
+        <div id="overlay" class="overlay">
+          <div class="overlay-card">
+            <div class="mini-face"><img src="assets/srikanth.jpg" alt="Srikanth"></div>
+            <p class="eyebrow" id="overlayEyebrow">READY, PILOT?</p>
+            <h2 id="overlayTitle">Take off, Srikanth!</h2>
+            <p id="overlayText">Tap, click, or press Space to flap through the pipes.</p>
+            <button id="startBtn" class="primary-btn">Start Game <span>→</span></button>
+            <p class="hint">Music begins when you start.</p>
+          </div>
+        </div>
+      </div>
+      <div class="stats">
+        <div><span class="stat-label">SCORE</span><strong id="score">0</strong></div>
+        <div><span class="stat-label">BEST</span><strong id="best">0</strong></div>
+        <div class="controls">SPACE / CLICK / TAP <span>•</span> FLAP</div>
+      </div>
+    </section>
+    <footer>Made for the friend group. Play nice. Fly badly.</footer>
+  </main>
+  <audio id="music" src="assets/music.mp3" loop preload="auto"></audio>
+  <script src="game.js"></script>
+</body>
+</html>
